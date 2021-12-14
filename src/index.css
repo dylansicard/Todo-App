@@ -3,10 +3,10 @@ body {
   font-family: 'Arial';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #209cee;
 }
 
 .app {
-  background: #209cee;
   padding: 30px;
   height: 100vh;
   display: flex;
@@ -42,4 +42,8 @@ body {
   padding: 1rem;
   height: 2.25em;
   font-size: 24px;
+}
+
+.checkbox:hover {
+  cursor: pointer;
 }

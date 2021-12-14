@@ -12,19 +12,32 @@ const App = () => {
 
   const handleDelete = (e) => {
     const index = Number(e.target.id);
-    console.log(index);
     let temp = [...todos];
-    console.log(temp);
     temp.splice(index, 1);
+    setTodos(temp);
+  };
+
+  const handleComplete = (e) => {
+    const index = Number(e.target.id);
+    let temp = [...todos];
+    let currentTodo = { ...temp[index] };
+    currentTodo.isCompleted = e.target.checked;
+    temp.splice(index, 1, currentTodo);
     setTodos(temp);
   };
 
   const renderTodos = todos.map((todo, i) => {
     return (
       <div className="todo" key={i} id={i}>
-        <div class="ui left floated compact segment">
-          <div class="fitted checkbox">
-            <input type="checkbox" />
+        <div className="ui left floated compact segment">
+          <div className="fitted checkbox">
+            <input
+              id={i}
+              type="checkbox"
+              className="checkbox"
+              onChange={handleComplete}
+              checked={todo.isCompleted}
+            />
             <label></label>
           </div>
         </div>
