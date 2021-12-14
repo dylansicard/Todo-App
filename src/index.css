@@ -5,14 +5,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-cody {
-  font-family: Arial;
-}
-
 .app {
   background: #209cee;
   padding: 30px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todo-list {
